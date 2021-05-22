@@ -16,7 +16,7 @@ secret_file = os.path.join(BASE_DIR, 'secrets.json')
 with open(secret_file) as f:
     secrets = json.loads(f.read())
 ##### SEARCHING #####
-index_name = "pet_disease"
+index_name = "disease_pet"
 client = Elasticsearch(secrets['DJANGO_ELASTICSEARCH_ADDRESS'], timeout=30, max_retries=10, retry_on_timeout=True)
 print('elasticsearch load complete')
 # sentence model load
