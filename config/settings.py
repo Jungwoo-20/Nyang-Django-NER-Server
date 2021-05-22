@@ -33,6 +33,7 @@ with open(secret_file) as f:
 
 ALLOWED_HOSTS = [secrets['DJANGO_IP_ADDRESS']]
 # python manage.py runserver ip:8080
+# python manage.py runsslserver ip:8080
 
 # Application definition
 
