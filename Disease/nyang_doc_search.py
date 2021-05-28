@@ -55,7 +55,8 @@ def document_search(input_query):
             "answer": hit["_source"]["answer"],
             "answer_ner": hit["_source"]["answer_ner"],
             "url": hit["_source"]["url"],
-            "sentence_info": hit["_source"]["sentence_info"]
+            "sentence_info": hit["_source"]["sentence_info"],
+            "percent": round((float(hit["_score"]) - 1) * 100, 3)
         }
         i += 1
         result_list.append(result)
